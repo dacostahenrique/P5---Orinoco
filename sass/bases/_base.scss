@@ -1,0 +1,76 @@
+@import "../utils/variables";
+
+/* BASES */
+
+html, body, main, header, footer, article, section, div, nav, ul, li, h1, h2, h3, p, span, button, form, legend, label, input, select, table, tr, th, tbody, thead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+    text-align: justify;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+
+body {
+  font-family: "Dancing Script", serif;
+  font-size: 1.4em;
+  line-height: 1.3;
+  background-color: $color-base-bg;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+header, footer, nav {
+	display: flex;
+	flex-flow: wrap;
+}
+
+ul {
+	list-style: none;
+}
+
+label {
+	display: block;
+	margin-bottom: .5rem;
+}
+
+select, input {
+  display: block;
+  margin-bottom: 1rem;
+  height: 4rem;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+img {
+	display: block;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+button:focus,
+select:focus,
+input:focus
+ {
+  outline: 1rem #080801;
+}
+
+.container {
+	height: 100vh;
+
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+

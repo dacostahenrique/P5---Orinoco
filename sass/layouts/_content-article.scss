@@ -1,0 +1,38 @@
+@import "../utils/variables";
+
+/* LAYOUT CONTENT-ARTICLE */
+
+.content {
+  position: relative;
+  min-height: auto;
+  background-color: $color-article-bg;
+}
+
+.articles {
+	margin: 0 auto;
+	padding: 3.5rem 1.5rem;
+	width: 60%;
+	@media screen and (max-width: $breakpoint-large) {
+		max-width: 100%;
+	}
+	@media screen and (max-width: $breakpoint-medium) {
+		padding: 3.5rem 0;
+		width: 100%;
+	}
+	&__header {
+		justify-content: center;
+		&--title {
+			margin:0 3rem 2rem;
+			font-size: 4rem;
+			color: $color-header-bg;
+		}
+	}
+	&__footer {
+		@extend .articles__header;
+		&--info {
+			margin:0 3rem 2rem;
+			color: $color-header-ft;
+		}
+	}
+}
+

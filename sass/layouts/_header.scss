@@ -1,0 +1,43 @@
+@import "../utils/variables";
+
+/* LAYOUT HEADER */
+
+.header {
+	justify-content: center;
+  	align-items: center;
+  	height:50%;
+  	background-color: $color-header-bg;
+	&__image--bg {
+		background-image: url(../images/accueil_chêne.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		}
+	&__banner {
+		padding: 0 3rem;
+		&--title {
+			font-size: 5rem;
+			font-weight: 800;
+			color: #000000;
+			}
+		&--subtitle {
+			font-size: 3rem;
+			line-height: 1;
+			color: #fff;
+			overflow-y: hidden;
+		}
+	}
+}
+
+// Responsive breakpoint < 450 px titres header
+
+ @media screen and (max-width: 450px) {
+ 	.header__banner {
+ 		padding-left: 5%;
+ 		padding-right: 5%;
+ 		width: 90%;
+ 		&--title{
+ 			font-size: 4.5rem;
+ 		}
+ 	}
+ }

@@ -1,0 +1,56 @@
+@import "../utils/variables";
+
+/* COMPOSANT TABLE */
+
+.table {
+
+	margin: 3rem auto;
+	width: 90%;
+	transform: $transform;
+	transition: all $duration ease-in-out;
+	&:hover {
+		box-shadow: $box-shadow-hover;
+		transform: $transform-hover;
+	}
+	&__caption {
+		margin-bottom: 1rem;
+		width: 100%;
+		font-family: 'Fredoka One', cursive;
+		font-size: 2.5rem;
+	}
+	&__head,
+	&__body {
+
+		&--title,
+		&--content {
+		display: flex;
+    	flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		border-left: solid .1rem $color-header-bg;
+			& th,
+			& td {
+				padding:1.3rem;
+				//flex: 1 2 150px;
+				width: calc(100% / 4);
+				text-align: center;
+				border-right: solid .1rem $color-header-bg;
+				border-bottom: solid .1rem $color-header-bg;
+			}
+		}
+		&--title {
+			font-family: 'Fredoka One', cursive;
+			color: $color-base-bg;
+			background-color: $color-btn-bg;
+			border-top: solid .1rem $color-header-bg;
+		}
+		&--content {
+		}
+	}
+	&__head {
+
+	}
+	&__content {
+
+	}
+}
