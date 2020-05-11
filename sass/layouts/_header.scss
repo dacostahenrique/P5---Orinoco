@@ -6,15 +6,16 @@
 	justify-content: center;
   	align-items: center;
   	height:50%;
-  	background-color: $color-header-bg;
-	&__image--bg {
+  	/*background-color: $color-header-bg;*/
+	/*&__image--bg {
 		background-image: url(../images/accueil_chêne.jpg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		}
+		}*/
 	&__banner {
 		padding: 0 3rem;
+		width: 80%;
 		&--title {
 			font-size: 5rem;
 			font-weight: 800;
@@ -35,9 +36,9 @@
  	.header__banner {
  		padding-left: 5%;
  		padding-right: 5%;
- 		width: 90%;
+ 		width: 100%;
  		&--title{
- 			font-size: 4.5rem;
+ 			font-size: 4.2rem;
  		}
  	}
  }

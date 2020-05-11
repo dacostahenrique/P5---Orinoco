@@ -5,7 +5,7 @@
 .content {
   position: relative;
   min-height: auto;
-  background-color: $color-article-bg;
+  /*background-color: $color-article-bg;*/
 }
 
 .articles {
@@ -23,8 +23,8 @@
 		justify-content: center;
 		&--title {
 			margin:0 3rem 2rem;
-			font-size: 4rem;
-			color: $color-header-bg;
+			font-size: 7rem;
+			color: red/*$color-header-bg*/;
 		}
 	}
 	&__footer {
@@ -35,4 +35,3 @@
 		}
 	}
 }
-

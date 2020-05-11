@@ -2,7 +2,7 @@
 .content {
   position: relative;
   min-height: auto;
-  background-color: #FEFDA8; }
+  /*background-color: $color-article-bg;*/ }
 
 .articles {
   margin: 0 auto;
@@ -19,8 +19,8 @@
     justify-content: center; }
     .articles__header--title {
       margin: 0 3rem 2rem;
-      font-size: 4rem;
-      color: #F3976C; }
+      font-size: 7rem;
+      color: red; }
   .articles__footer--info {
     margin: 0 3rem 2rem;
     color: #000000; }

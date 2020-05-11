@@ -1,10 +1,47 @@
+@charset "UTF-8";
 /* BASES */
 html, body, main, header, footer, article, section, div, nav, ul, li, h1, h2, h3, p, span, button, form, legend, label, input, select, table, tr, th, tbody, thead {
   margin: 0;
   padding: 0;
   border: 0;
-  vertical-align: baseline;
-  text-align: justify; }
+  vertical-align: baseline; }
+
+html {
+  background: url(../images/bg.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */ }
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100; }
+
+h1, h2, h3 {
+  text-align: center; }
+
+h1 {
+  display: table;
+  padding-bottom: 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+
+h1:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  border-bottom: 5px double red; }
+
+p {
+  text-align: justify;
+  padding-right: 5%; }
 
 table {
   border-collapse: collapse; }
@@ -13,7 +50,7 @@ body {
   font-family: "Dancing Script", serif;
   font-size: 1.4em;
   line-height: 1.3;
-  background-color: #fff; }
+  /*background-color: $color-base-bg;*/ }
 
 html, body {
   overflow-x: hidden; }
@@ -41,7 +78,6 @@ img {
   display: block;
   vertical-align: middle;
   width: 100%;
-  max-width: 100%;
   height: auto; }
 
 button:focus,

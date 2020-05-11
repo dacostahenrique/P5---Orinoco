@@ -50,8 +50,8 @@
 			</nav>
 			<header class="header header__image--bg">
 				<div class="header__banner">
-					<h1 class="header__banner--title">Valider le panier</h1>
-					<p class="header__banner--subtitle">Une sélection de meubles en chêne.</p>
+					<h1 class="header__banner--title">Meubles en chêne design</h1>
+					<p class="header__banner--subtitle"></p>
 				</div>
 			</header>
 			<main class="content">
@@ -61,68 +61,65 @@
 					</header>
 					<article class="articles__list articles__list--table">
 						<table class="table">
-							<caption class="table__caption">Récapitulatif de votre commande :</caption>
+							<caption class="table__caption">Votre panier</caption>
 							<thead class="table__head">
 								<tr class="table__head--title">
-									<th>Produit</th>
+									<th>Nom</th>
+									<th>Qte</th>
 									<th>Prix</th>
-									<th>Quantité</th>
-									<th>Total</th>
+                                    <th>Retirer</th>
 								</tr>
 							</thead>
 							<tbody class="table__body">
-								<tr class="table__body--content">
-									<td>ffff</td>
-									<td>0000</td>
-									<td>1</th>
-									<td>499€</td>
-								</tr>
+
 							</tbody>
 						</table>
 						<form class="form" action="confirmation.html">
-
+                            <div class="form__saisie">
 							<div class="form__info">
                                 <legend class="form__info--legend">Vos coordonnées : </legend>
 
                                 <label for="nom">Nom :</label>
-                                <input type="text" name="nom" id="nom" required />
+                                <input type="text" name="nom" id="nom" placeholder ="Nom" required />
 
                                 <label for="prenom">Prénom :</label>
-                                <input type="text" name="prenom" id="prenom" required />
+                                <input type="text" name="prenom" id="prenom" placeholder ="Prénom"required />
 
                                 <label for="email">E-mail :</label>
-                                <input type="email" name="email" id="email" required />
+                                <input type="email" name="email" id="email" placeholder ="Email"required />
 
                                 <label for="phone">Téléphone (optionnel) :</label>
-                                <input type="tel" name="phone" id="phone" />
+                                <input type="tel" name="phone" id="phone" placeholder ="Téléphone"/>
                             </div>
 
                             <div class="form__address">
                                 <legend class="form__address--legend">Adresse de livraison : </legend>
 
                                 <label for="adresse">Adresse :</label>
-                                <input type="text" name="adresse" id="adresse" required />
+                                <input type="text" name="adresse" id="adresse" placeholder ="Adresse"required />
 
                                 <label for="zip">Code postal :</label>
-                                <input type="number" name="zip" id="zip" required />
+                                <input type="number" name="zip" id="zip" placeholder ="Code postal"required />
 
                                 <label for="ville">Ville :</label>
-                                <input type="text" name="ville" id="ville" required />
+                                <input type="text" name="ville" id="ville" placeholder ="Ville"required />
 
                                 <label for="pays">Pays :</label>
-                				<input type="text" name="pays" id="pays" required />
-
+                				<input type="text" name="pays" id="pays" placeholder ="Pays"required />
                 			</div>
-                				<button class="btn" type="submit" aria-label="Valider vos informations et cliquer sur confirmer">confirmer</button>
+                            </div>
+                				<button class="btn" type="submit" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
 						</form>
 					</article>
 
 					<footer class="articles__footer">
-						<p class="articles__footer--info">Orinoco vous remercie de votre visite.</p>
+						<p class="articles__footer--info">Henrique Da Costa - Openclassrooms Mai 2020.</p>
 					</footer>
 			</article>
 			</main>
 
-		<script type="module" src="assets/js/app.js"></script>
+            <script src="js/panier.js"></script>
+
+
 	</body>
 </html>

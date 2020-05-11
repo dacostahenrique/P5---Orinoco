@@ -1,12 +1,12 @@
 @import "../utils/variables";
 
-/* COMPOSANT MODAL */
+/* COMPOSANT CONFIRMATION */
 
-.modal {
+.confirmation {
 	margin: 2rem auto;
 	width: 90%;
 	padding: 3rem;
-	background-color: $color-modal-bg;
+	background-color: $color-confirmation-bg;
 	box-shadow: $box-shadow-hover;
 	@media screen and (min-width: $breakpoint-medium) {
 		box-shadow: $box-shadow;

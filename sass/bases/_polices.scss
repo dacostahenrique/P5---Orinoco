@@ -46,6 +46,18 @@
   font-style: normal; }
 
 @font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
   font-family: 'robotothin_italic';
   src: url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.eot");
   src: url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.woff2") format("woff2"), url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.woff") format("woff"), url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.ttf") format("truetype"), url("../fonts/Roboto/roboto_thinitalic_macroman/Roboto-ThinItalic-webfont.svg#robotothin_italic") format("svg");
@@ -110,8 +122,8 @@ html {
     font-size: 70%;
 }
 
-h2, h3 {
-	font-family: "Dancing Script", cursive;
+h2 {
+	font-family: 'fontleroybrownregular';
 }
 
 p {
@@ -132,5 +144,5 @@ a:focus {
 
 .articles__footer--info {
   font-family: "fontleroybrownregular" ;
-  font-size: 2em;
+  font-size: 1.8em;
 }

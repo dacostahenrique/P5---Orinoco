@@ -4,8 +4,9 @@
 /* COMPOSANT BOUTTON */
 
 .btn {
-	padding: 1.5rem 4rem;
-	width: 100%;
+	text-align: center;
+	padding: 2%;
+	width: 80%;
 	font-family: "Kalam-Light", cursive;
 	font-size: 2rem;
 	color: $color-base-bg;
@@ -20,8 +21,8 @@
 		transform: $transform-hover;
 	}
 	@media screen and (min-width: $breakpoint-small) {
-		width: 20rem;
-		min-width: 20rem;
+		width: 60%;
+
 	}
 	&:hover {
 		background-color: $color-btn-bg-hover;

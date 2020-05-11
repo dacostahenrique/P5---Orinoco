@@ -1,7 +1,8 @@
 /* COMPOSANT BOUTTON */
 .btn {
-  padding: 1.5rem 4rem;
-  width: 100%;
+  text-align: center;
+  padding: 2%;
+  width: 80%;
   font-family: "Kalam-Light", cursive;
   font-size: 2rem;
   color: #fff;
@@ -16,7 +17,6 @@
     transform: translateY(-1rem) scale(1.05); }
   @media screen and (min-width: 751px) {
     .btn {
-      width: 20rem;
-      min-width: 20rem; } }
+      width: 60%; } }
   .btn:hover {
     background-color: #5e0808; }
