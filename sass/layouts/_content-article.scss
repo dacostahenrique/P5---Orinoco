@@ -35,3 +35,9 @@
 		}
 	}
 }
+
+.articles__footer {
+	z-index:-1;
+	position: sticky;
+	bottom: 0;
+}

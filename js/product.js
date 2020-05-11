@@ -14,9 +14,9 @@ ajaxDetailsProduits.promiseGetData('GET', API_URL,null)
     let data = response;
     console.log(data);
     // Appels de fonctions
-    getArticleByIdData(itemArticleById,data);
-    getSelectAllOption(data);
-    ajoutProduit(response);
+    getArticleByIdData(itemArticleById,data); /* Intégration du détail produit sélectionné en page accueil catalogue dans la page produit.html */
+    getSelectAllOption(data); /* Intégration dans la page produit.html du menu déroulant de choix des options produit */
+    ajoutProduit(response); /* Ajout des produits au panier sur le clic bouton Ajouter au panier */
   })
 
   .catch(function () {

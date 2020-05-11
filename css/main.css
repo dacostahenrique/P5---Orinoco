@@ -293,6 +293,11 @@ a:focus {
     margin: 0 3rem 2rem;
     color: #000000; }
 
+.articles__footer {
+  z-index: -1;
+  position: sticky;
+  bottom: 0; }
+
 /* COMPOSANTS CARDS */
 .cards {
   display: flex;
