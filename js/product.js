@@ -65,10 +65,10 @@ if(localStorage.getItem("panier")){
   console.log("Le panier existe dans LocalStorage");
 }else{
   console.log("Le panier n'existe pas. => Le créer et l'enregistrer dans LocalStorage");
-//Initialisation du panier
-let initPanier = [];
-localStorage.setItem("panier", JSON.stringify(initPanier));
-};
+  //Initialisation du panier
+  let initPanier = [];
+  localStorage.setItem("panier", JSON.stringify(initPanier));
+}
 
 //Tableau et objet demandé par l'API pour la commande
 let contact;
@@ -78,25 +78,8 @@ let products = [];
 let panier = JSON.parse(localStorage.getItem("panier"));
 
 
-//AJOUT PRODUIT AU PANIER
-//************************
-/*
-const ajoutPanier = new Ajax();
-
-ajoutPanier.promiseGetData('GET', API_URL,null)
-  .then(function (response) {
-    // Le serveur a correctement répondu
-
-    let produit = response;
-    console.log(produit);
-    // Appels de fonctions
-    ajoutProduit(produit);
-  })
-
-  .catch(function () {
-    console.log("Erreur, status = " + this.status);
-  })
-*/
+//FONCTION AJOUT PRODUITS AU PANIER SUR LE CLIC BOUTON "AJOUTER AU PANIER"
+// -----------------------------------------------------------------------
 
 function ajoutProduit(data) {
 //Au clic sur le bouton Ajouter au panier => mettre le produit dans le panier
