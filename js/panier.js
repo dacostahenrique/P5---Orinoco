@@ -70,7 +70,7 @@ let totalMontant = document.createElement("td");
 
 tableBody.appendChild(totalPanier);
 totalPanier.appendChild(totalNom);
-totalNom.textContent = "Total à payer"
+totalNom.innerHTML = "<strong>Total à payer</strong>"
 totalPanier.appendChild(celVide1);
 celVide1.textContent = "-";
 totalPanier.appendChild(totalMontant);
@@ -90,7 +90,7 @@ JSON.parse(localStorage.getItem("panier")).forEach((produit)=>{
 //------------------------------
 
 console.log("Total Panier = " + montantPanier);
-document.getElementById("totalMontant").textContent = montantPanier + " €";
+document.getElementById("totalMontant").textContent = montantPanier + "€";
 
 
 //Retirer un produit du panier
@@ -107,4 +107,6 @@ function supprimerProduit (i) {
   //Relance la création de l'addition
   window.location.reload();
 }
+
+
 

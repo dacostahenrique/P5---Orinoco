@@ -22,10 +22,19 @@
       font-size: 7rem;
       color: red; }
   .articles__footer--info {
-    margin: 0 3rem 2rem;
     color: #000000; }
 
 .articles__footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
   z-index: -1;
   position: sticky;
-  bottom: 0; }
+  bottom: 0;
+  color: #000000;
+  font-family: 'robotoregular';
+  font-size: 1.8rem;
+  font-weight: bold; }
+  @media screen and (max-width: 600px) {
+    .articles__footer {
+      flex-direction: column; } }

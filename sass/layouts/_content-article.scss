@@ -30,14 +30,24 @@
 	&__footer {
 		@extend .articles__header;
 		&--info {
-			margin:0 3rem 2rem;
+
 			color: $color-header-ft;
 		}
 	}
 }
 
 .articles__footer {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
 	z-index:-1;
 	position: sticky;
 	bottom: 0;
+	color: $color-header-ft;
+	font-family: 'robotoregular';
+	font-size: 1.6rem;
+	font-weight: bold;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
 }

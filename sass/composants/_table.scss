@@ -72,3 +72,21 @@
 .overflow{
 	overflow:hidden;
 }
+
+#totalMontant{
+	font-weight: bold;
+}
+
+.btn__panier {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding:2%;
+	font-family: "JD Carnival Black", cursive;
+	width: 70%;
+	@media screen and (max-width: 600px){
+		font-size: 0.8rem;
+	}
+}

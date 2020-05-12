@@ -95,7 +95,7 @@ h2 {
 
 p {
   color: rgba(0, 0, 0, 0.7);
-  font-family: "fontleroybrownregular-webfont.eot"; }
+  font-family: "robotoregular"; }
 
 a {
   text-decoration: none;
@@ -107,5 +107,5 @@ a:focus {
   text-decoration: solid; }
 
 .articles__footer--info {
-  font-family: "fontleroybrownregular";
+  font-family: "robotoregular";
   font-size: 1.8em; }

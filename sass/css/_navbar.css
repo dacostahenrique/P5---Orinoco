@@ -2,7 +2,6 @@
 .nav {
   justify-content: space-around;
   padding: 1.5rem 0;
-  z-index: 9999;
   font-family: "JD Carnival Black", cursive;
   background-color: #F3976C;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4), 0 4px 4px rgba(255, 255, 255, 0.3); }
@@ -19,6 +18,9 @@
     color: #fff; }
   .nav__logo {
     font-size: 2.5rem; }
+    @media screen and (max-width: 335px) {
+      .nav__logo {
+        font-size: 1.6rem; } }
   .nav__lists__item {
     margin-top: .2rem; }
     .nav__lists__item--right {
@@ -29,3 +31,11 @@
       background-size: 2.1rem auto;
       background-position: left center;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 335px) {
+        .nav__lists__item--right {
+          font-size: 1.6rem; } }
+
+#compteur {
+  display: inline-block;
+  border: #000 solid 3px;
+  border-radius: 50%; }

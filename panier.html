@@ -44,8 +44,8 @@
 				<a class="nav__logo" href="index.html">orinoco</a>
 				<ul class="nav__lists">
 					<li class="nav__lists__item">
-						<a href="panier.html" class="nav__lists__item--right"><i class="fas fa-shopping-basket"></i>Panier</a>
-					</li>
+                        <a href="panier.html" class="nav__lists__item--right"><i class="fas fa-shopping-basket"></i>Panier<div id ="compteur">c</div></a>
+                    </li>
 				</ul>
 			</nav>
 			<header class="header header__image--bg">
@@ -72,8 +72,14 @@
 							</thead>
 							<tbody class="table__body">
 
+                            <!-- Construction du tableau_body avec une fonction javascript en dynamique -->
+
 							</tbody>
 						</table>
+                        <div class="btn__panier">
+                            <a class=" btn btn__autre__produit__panier" href="index.html" aria-label="Choisir un autre produit">Un autre produit ?</a>
+                            </a>
+                        </div>
 						<form class="form" action="confirmation.html">
                             <div class="form__saisie">
 							<div class="form__info">
@@ -113,13 +119,13 @@
 					</article>
 
 					<footer class="articles__footer">
-						<p class="articles__footer--info">Henrique Da Costa - Openclassrooms Mai 2020.</p>
-					</footer>
+                       <div>&#x40;Henrique Da Costa</div><div>Openclassrooms Mai 2020</div>
+                    </footer>
 			</article>
 			</main>
 
             <script src="js/panier.js"></script>
-
+            <script  src="js/compteur.js"></script>
 
 	</body>
 </html>

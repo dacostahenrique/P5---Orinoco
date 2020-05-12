@@ -188,7 +188,7 @@ h2 {
 
 p {
   color: rgba(0, 0, 0, 0.7);
-  font-family: "fontleroybrownregular-webfont.eot"; }
+  font-family: "robotoregular"; }
 
 a {
   text-decoration: none;
@@ -200,7 +200,7 @@ a:focus {
   text-decoration: solid; }
 
 .articles__footer--info {
-  font-family: "fontleroybrownregular";
+  font-family: "robotoregular";
   font-size: 1.8em; }
 
 /* NAVBAR */
@@ -223,6 +223,9 @@ a:focus {
     color: #fff; }
   .nav__logo {
     font-size: 2.5rem; }
+    @media screen and (max-width: 335px) {
+      .nav__logo {
+        font-size: 1.6rem; } }
   .nav__lists__item {
     margin-top: .2rem; }
     .nav__lists__item--right {
@@ -233,6 +236,14 @@ a:focus {
       background-size: 2.1rem auto;
       background-position: left center;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 335px) {
+        .nav__lists__item--right {
+          font-size: 1.6rem; } }
+
+#compteur {
+  display: inline-block;
+  border: #000 solid 3px;
+  border-radius: 50%; }
 
 /* LAYOUT HEADER */
 .header {
@@ -290,13 +301,22 @@ a:focus {
       font-size: 7rem;
       color: red; }
   .articles__footer--info {
-    margin: 0 3rem 2rem;
     color: #000000; }
 
 .articles__footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
   z-index: -1;
   position: sticky;
-  bottom: 0; }
+  bottom: 0;
+  color: #000000;
+  font-family: 'robotoregular';
+  font-size: 1.6rem;
+  font-weight: bold; }
+  @media screen and (max-width: 600px) {
+    .articles__footer {
+      flex-direction: column; } }
 
 /* COMPOSANTS CARDS */
 .cards {
@@ -532,6 +552,22 @@ a:focus {
 
 .overflow {
   overflow: hidden; }
+
+#totalMontant {
+  font-weight: bold; }
+
+.btn__panier {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 2%;
+  font-family: "JD Carnival Black", cursive;
+  width: 70%; }
+  @media screen and (max-width: 600px) {
+    .btn__panier {
+      font-size: 0.8rem; } }
 
 /* COMPOSANT CONFIRMATION */
 .confirmation {

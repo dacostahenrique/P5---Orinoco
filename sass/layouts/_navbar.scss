@@ -26,6 +26,9 @@
 	}
 	&__logo {
 		font-size: 2.5rem;
+		@media screen and (max-width: 335px){
+				font-size: 1.6rem;
+			}
 	}
 	&__lists {
 		&__item {
@@ -34,6 +37,9 @@
 				position: relative;
 				padding-left: 2.5rem;
 				font-size: 2rem;
+				@media screen and (max-width: 335px){
+					font-size: 1.6rem;
+				}
 				color: $color-base-bg;
 				background-size: 2.1rem auto;
 				background-position: left center;
@@ -42,4 +48,11 @@
 		}
 	}
 
+}
+ // Compteur articles panier navbar
+
+ #compteur {
+  display: inline-block;
+  border: #000 solid 3px;
+  border-radius: 50%;
 }
