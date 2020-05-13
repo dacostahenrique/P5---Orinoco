@@ -441,6 +441,9 @@ a:focus {
       .card .btn {
         bottom: 1rem; } }
 
+#quantite {
+  max-width: 200px; }
+
 .articles__list {
   display: flex;
   flex-direction: column;

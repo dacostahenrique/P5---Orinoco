@@ -42,6 +42,8 @@ function getArticleByIdData(itemArticleById,data) {
 			<select id="varnish" class="card__form__select js-varnishSelectAllOption" aria-label="Sélectionner le modèle de votre choix">
 
 			</select>
+      <label for="quantité"><strong>Entrer une quantité</strong></label>
+      <input type="number" name="quantité" id="quantite" placeholder ="Entrer une quantité" required />
 			<button class="btn" id="ajoutPanier" type="submit" aria-label="Valider et accéder au panier">Ajouter au panier</button>
 		</form>
 	</div>`;
@@ -84,14 +86,29 @@ let panier = JSON.parse(localStorage.getItem("panier"));
 function ajoutProduit(data) {
 //Au clic sur le bouton Ajouter au panier => mettre le produit dans le panier
   let clicPanier = document.getElementById("ajoutPanier");
-  console.log ("ajout panier");
+
+  /* Création d'une classe pour ajouter au panier les informations Quantité et Sous/Total par article ajouté
+      --------------------------------------------------------------------------------------------------------*/
+
+  class panierAffiche {
+    constructor (id, name, varnish, qte, price){
+      this.id=id;
+      this.name=name;
+      this.varnish=varnish;
+      this.qte = qte;
+      this.price = price/100;
+      this.subTotal=parseInt(this.qte)*parseInt(this.price)
+    }
+  }
+  /* Au clic sur le bouton Ajouter au panier -> génération du panier
+    ---------------------------------------------------------------- */
+
   clicPanier.addEventListener("click", async function() {
     //Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
-    panier.push(data);
+    let qte = document.getElementById('quantite').value;
+    let newPanierAffiche = new panierAffiche (data._id, data.name, data.varnish, qte, data.price);
+    panier.push(newPanierAffiche);
     localStorage.setItem("panier", JSON.stringify(panier));
-    console.log("Produit ajouté au panier");
     alert("Produit ajouté au panier")
-    let x = JSON.parse(localStorage.getItem("panier"));
-    console.log(x);
   });
 }

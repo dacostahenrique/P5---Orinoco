@@ -12,7 +12,28 @@ const tableBody = document.querySelector('.table__body');
 
 let panier = JSON.parse(localStorage.getItem("panier"));
 
+// Tri du panier par ordre alphabétique sur le nom du produit
+// ----------------------------------------------------------
+
+panier.sort(function(a, b) {
+
+  if (a.name < b.name) {
+    return -1;
+  } else if (a.name > b.name) {
+    return 1;
+  } else {
+    return 0;
+  }
+
+});
+
+localStorage.setItem("panier", JSON.stringify(panier));
+
+// Fonction de création du panier dans la page html
+// ------------------------------------------------
+
 JSON.parse(localStorage.getItem("panier")).forEach((produit)=>{
+
 
   //Création de la ligne
   //--------------------
@@ -54,8 +75,8 @@ JSON.parse(localStorage.getItem("panier")).forEach((produit)=>{
   //------------------
 
   nomProduit.innerHTML = produit.name;
-  qteProduit.textContent = 1;
-  prixProduit.textContent = produit.price / 100 + " €";
+  qteProduit.textContent = parseInt(produit.qte);
+  prixProduit.textContent = produit.subTotal + " €";
 });
 
 //Dernière ligne du tableau : Total
@@ -80,18 +101,15 @@ celVide2.textContent = "-";
 
 //Calcul du montant total du panier
 //---------------------------------
-
 let montantPanier = 0;
 JSON.parse(localStorage.getItem("panier")).forEach((produit)=>{
-  montantPanier += produit.price / 100;
+  montantPanier += produit.subTotal;
 });
 
 //Affichage du montant du panier
 //------------------------------
 
-console.log("Total Panier = " + montantPanier);
 document.getElementById("totalMontant").textContent = montantPanier + "€";
-
 
 //Retirer un produit du panier
 //----------------------------
@@ -107,6 +125,7 @@ function supprimerProduit (i) {
   //Relance la création de l'addition
   window.location.reload();
 }
+
 
 
 

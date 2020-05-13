@@ -1,7 +1,17 @@
 const compteur = document.querySelector('#compteur');
 
-let x = (JSON.parse(localStorage.getItem("panier"))).length;
+// Calcul du nombre d'articles présents dans le panier
+// --------------------------------------------------
+let countArticles = 0;
 
-console.log(x);
+JSON.parse(localStorage.getItem("panier")).forEach((produit)=>{
+  countArticles +=parseInt(produit.qte);
+});
 
-compteur.innerHTML = "-" + (JSON.parse(localStorage.getItem("panier"))).length + "-";
+// Affichage du nombre d'articles dans la navbar
+// ---------------------------------------------
+
+compteur.innerHTML = "-" + countArticles + "-";
+
+
+
