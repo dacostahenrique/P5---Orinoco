@@ -1,6 +1,12 @@
 // PAGE PANIER
 // -----------
 
+//Tableau et objet demandé par l'API pour la commande - Seront utilisés lors de l'envoi du formulaire
+// --------------------------------------------------------------------------------------------------
+
+let contact;
+let products = [];
+
 //Création de chaque ligne du panier
 //-----------------------------------
 
@@ -127,5 +133,23 @@ function supprimerProduit (i) {
 }
 
 
+// FONCTION DE VERIFICATION DU PANIER LORS DE L'ENVOI DU FORMULAIRE (au clic sur le bouton Passer commande)
+// --------------------------------------------------------------------------------------------------------
 
+verifPanier = () =>{
+
+  //Vérifier qu'il y ai au moins un produit dans le panier
+  let etatPanier = JSON.parse(localStorage.getItem("panier"));
+  if(etatPanier.length < 1 || etatPanier == null){
+    alert("Votre panier est vide");
+    return false;
+  }else{
+    //Si le panier contient au moins un article, on remplit le tableau demandé pour envoi à l'API
+    JSON.parse(localStorage.getItem("panier")).forEach((produit) =>{
+      products.push(produit._id);
+      return true;
+    });
+    console.log("Ce tableau est envoyé à l'API : " + products)
+  }
+};
 

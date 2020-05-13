@@ -72,10 +72,6 @@ if(localStorage.getItem("panier")){
   localStorage.setItem("panier", JSON.stringify(initPanier));
 }
 
-//Tableau et objet demandé par l'API pour la commande
-let contact;
-let products = [];
-
 //Le panier est disponible
 let panier = JSON.parse(localStorage.getItem("panier"));
 
@@ -91,8 +87,8 @@ function ajoutProduit(data) {
       --------------------------------------------------------------------------------------------------------*/
 
   class panierAffiche {
-    constructor (id, name, varnish, qte, price){
-      this.id=id;
+    constructor (_id, name, varnish, qte, price){
+      this._id=_id;
       this.name=name;
       this.varnish=varnish;
       this.qte = qte;
