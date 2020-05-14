@@ -149,7 +149,11 @@ verifPanier = () =>{
       products.push(produit._id);
       return true;
     });
-    console.log("Ce tableau est envoyé à l'API : " + products)
+    console.log("Ce tableau sera envoyé à l'API : " + products)
   }
 };
 
+// Remplissage du tableau products aprés vérification qu'il contient au moins un article
+// --------------------------------------------------------------------------------------
+
+verifPanier();

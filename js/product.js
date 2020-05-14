@@ -43,7 +43,7 @@ function getArticleByIdData(itemArticleById,data) {
 
 			</select>
       <label for="quantité"><strong>Entrer une quantité</strong></label>
-      <input type="number" name="quantité" id="quantite" placeholder ="Entrer une quantité" required />
+      <input type="number" name="quantité" id="quantite" placeholder ="Entrer une quantité" min="1" required />
 			<button class="btn" id="ajoutPanier" type="submit" aria-label="Valider et accéder au panier">Ajouter au panier</button>
 		</form>
 	</div>`;
@@ -96,15 +96,24 @@ function ajoutProduit(data) {
       this.subTotal=parseInt(this.qte)*parseInt(this.price)
     }
   }
+
   /* Au clic sur le bouton Ajouter au panier -> génération du panier
     ---------------------------------------------------------------- */
 
   clicPanier.addEventListener("click", async function() {
-    //Récupération du panier dans le localStorage et ajout du produit dans le panier avant revoit dans le localStorage
-    let qte = document.getElementById('quantite').value;
-    let newPanierAffiche = new panierAffiche (data._id, data.name, data.varnish, qte, data.price);
-    panier.push(newPanierAffiche);
-    localStorage.setItem("panier", JSON.stringify(panier));
-    alert("Produit ajouté au panier")
+    // Validation e la quantité entrée avec la méthode checkValidity
+    let inpObj = document.getElementById("quantite");
+    if (inpObj.checkValidity()){
+      let qte = document.getElementById('quantite').value;
+      //Ajout du produit dans le panier avant revoit dans le localStorage
+      let newPanierAffiche = new panierAffiche (data._id, data.name, data.varnish, qte, data.price);
+      panier.push(newPanierAffiche);
+      localStorage.setItem("panier", JSON.stringify(panier));
+      alert("Produit ajouté au panier")
+    }else{
+      document.getElementById("quantite").validationMessage;
+    }
+
   });
 }
+
