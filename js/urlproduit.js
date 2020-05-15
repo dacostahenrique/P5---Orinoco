@@ -4,6 +4,7 @@
 let id ="";
 const host = "http://localhost:3000/api/furniture/";
 let API_URL = host + id;
+const API_URL_POST = host + "order";
 
 let urlcourante = document.location.href;
 console.log(urlcourante);

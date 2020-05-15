@@ -10,7 +10,7 @@
   width: 60%; }
   @media screen and (max-width: 1201px) {
     .articles {
-      max-width: 100%; } }
+      width: 100%; } }
   @media screen and (max-width: 901px) {
     .articles {
       padding: 3.5rem 0;
@@ -33,7 +33,7 @@
   bottom: 0;
   color: #000000;
   font-family: 'robotoregular';
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold; }
   @media screen and (max-width: 600px) {
     .articles__footer {

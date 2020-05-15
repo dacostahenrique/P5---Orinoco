@@ -62,9 +62,10 @@
 					<article class="articles__list articles__list--commande">
 						<div class="confirmation">
 							<h2 class="confirmation__title">Commande validée</h2>
-							<p>Numéro de commande : xxxx .</p>
-                            <p>Date : xx/xx/xxx.</p>
-                            <P>Montant TTC de : XXX€.</p>
+                            <p>Commande au nom de : <span id="nomConfirm"></span></p>
+							<p>Date : <span id="date"></span></p>
+                            <p>Numéro de commande : <span id="orderId"></span></p>
+                            <P>Montant TTC de : <span id="montantTTC"></span></p>
 							<p>Orinoco vous remercie pour votre achat et espère vous revoir bientôt.</p>
 							<p>Nous restons à votre disposition pour toutes questions relatives à vos produits.</p>
 							<div class="confirmation__button">
@@ -80,6 +81,7 @@
 
 
         <script  src="js/compteur.js"></script>
+        <script src="js/confirmation.js"></script>
 
 	</body>
 </html>

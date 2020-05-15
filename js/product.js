@@ -19,8 +19,8 @@ ajaxDetailsProduits.promiseGetData('GET', API_URL,null)
     ajoutProduit(response); /* Ajout des produits au panier sur le clic bouton Ajouter au panier */
   })
 
-  .catch(function () {
-    console.log("Erreur, status = " + this.status);
+  .catch(function (error) {
+    console.error("Erreur lors de l'envoi des données: " + error)
   })
 
 
@@ -111,7 +111,7 @@ function ajoutProduit(data) {
       localStorage.setItem("panier", JSON.stringify(panier));
       alert("Produit ajouté au panier")
     }else{
-      document.getElementById("quantite").validationMessage;
+      inpObj.validationMessage;
     }
 
   });

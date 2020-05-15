@@ -80,7 +80,8 @@
                             <a class=" btn btn__autre__produit__panier" href="index.html" aria-label="Choisir un autre produit">Un autre produit ?</a>
                             </a>
                         </div>
-						<form class="form" action="confirmation.html">
+						<form class="form"  id="form"  action="confirmation.html" name ="formulaire">
+                <!--<form class="form"  id="form" action="confirmation.html" onsubmit="return verifChampForm(this)">-->
                             <div class="form__saisie">
 							<div class="form__info">
                                 <legend class="form__info--legend">Vos coordonnées : </legend>
@@ -89,10 +90,10 @@
                                 <input type="text" name="nom" id="nom" placeholder ="Nom" required />
 
                                 <label for="prenom">Prénom :</label>
-                                <input type="text" name="prenom" id="prenom" placeholder ="Prénom"required />
+                                <input type="text" name="prenom" id="prenom" placeholder ="Prénom" required />
 
                                 <label for="email">E-mail :</label>
-                                <input type="email" name="email" id="email" placeholder ="Email"required />
+                                <input type="email" name="email" id="email" placeholder ="Email" required />
 
                                 <label for="phone">Téléphone (optionnel) :</label>
                                 <input type="tel" name="phone" id="phone" placeholder ="Téléphone"/>
@@ -102,19 +103,19 @@
                                 <legend class="form__address--legend">Adresse de livraison : </legend>
 
                                 <label for="adresse">Adresse :</label>
-                                <input type="text" name="adresse" id="adresse" placeholder ="Adresse"required />
+                                <input type="text" name="adresse" id="adresse" placeholder ="Adresse" required />
 
                                 <label for="zip">Code postal :</label>
-                                <input type="number" name="zip" id="zip" placeholder ="Code postal"required />
+                                <input type="number" name="zip" id="zip" placeholder ="Code postal" required />
 
                                 <label for="ville">Ville :</label>
-                                <input type="text" name="ville" id="ville" placeholder ="Ville"required />
+                                <input type="text" name="ville" id="ville" placeholder ="Ville" required />
 
                                 <label for="pays">Pays :</label>
-                				<input type="text" name="pays" id="pays" placeholder ="Pays"required />
+                				<input type="text" name="pays" id="pays" placeholder ="Pays" required />
                 			</div>
                             </div>
-                				<button class="btn" type="submit" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
+                				<button class="btn"  id="confirm" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
 						</form>
 					</article>
 
@@ -124,9 +125,9 @@
 			</article>
 			</main>
 
-
             <script src="js/panier.js"></script>
-            <script  src="js/compteur.js"></script>
+            <script src="js/formulaire.js"></script>
+            <script src="js/compteur.js"></script>
 
 	</body>
 </html>

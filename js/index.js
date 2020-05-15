@@ -16,8 +16,8 @@ ajaxCatalogueProduits.promiseGetData('GET', API_URL,null)
     }
   })
 
-  .catch(function () {
-    console.log("Erreur, status = " + this.status);
+  .catch(function (error) {
+    console.error("Erreur lors de l'envoi des données: " + error)
   })
 
 // CREATION DE LA PAGE PRODUITS DANS LE CORPS DU DOCUMENET HTML

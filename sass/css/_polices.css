@@ -109,3 +109,6 @@ a:focus {
 .articles__footer--info {
   font-family: "robotoregular";
   font-size: 1.8em; }
+
+.confirmation__title {
+  font-family: 'robotoregular'; }

@@ -203,6 +203,9 @@ a:focus {
   font-family: "robotoregular";
   font-size: 1.8em; }
 
+.confirmation__title {
+  font-family: 'robotoregular'; }
+
 /* NAVBAR */
 .nav {
   justify-content: space-around;
@@ -289,7 +292,7 @@ a:focus {
   width: 60%; }
   @media screen and (max-width: 1201px) {
     .articles {
-      max-width: 100%; } }
+      width: 100%; } }
   @media screen and (max-width: 901px) {
     .articles {
       padding: 3.5rem 0;
@@ -574,8 +577,8 @@ a:focus {
 
 /* COMPOSANT CONFIRMATION */
 .confirmation {
-  margin: 2rem auto;
-  width: 90%;
+  margin: 1rem auto;
+  width: 95%;
   padding: 3rem;
   background-color: #F3976C;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.2); }
@@ -589,7 +592,7 @@ a:focus {
         transform: translateY(-1rem) scale(1.05); } }
   @media screen and (min-width: 1201px) {
     .confirmation {
-      width: 60%; } }
+      width: 95%; } }
   .confirmation__title {
     margin-bottom: 3rem;
     text-align: center; }
