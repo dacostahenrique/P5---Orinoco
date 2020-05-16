@@ -18,7 +18,7 @@ function ajaxPost (data) {
       }
     }
   })
-};
+}
 
 //Tableau et objet demandés par l'API pour la commande - Seront utilisés lors de l'envoi du formulaire
 // --------------------------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ verifPanier = () =>{
   let etatPanier = JSON.parse(localStorage.getItem("panier"));
   if(etatPanier.length < 1 || etatPanier == null){
     alert("Votre panier est vide. Veuillez choisir un produit");
-    window.location.href = "index.html"
+    document.location.href = "index.html";
     return false;
   }else{
     //Si le panier contient au moins un article, on remplit le tableau demandé pour envoi à l'API
@@ -46,6 +46,7 @@ verifPanier = () =>{
     });
   }
 };
+
 
 // VERIFICATION DES CHAMPS DU FORMULAIRE
 // -------------------------------------
@@ -123,35 +124,43 @@ verifChampForm = () =>{
 // -------------------------------------------------
 const confirm = document.getElementById("confirm");
 
+
 confirm.addEventListener("click", function (event) { // Au moment du la soumission du formulaire :
 
   event.preventDefault();
 
-  verifPanier();
+  if(verifPanier()==false){
+    alert("Votre panier est vide. Veuillez choisir un produit");
+    document.location.href = "index.html";
+  }else{
 
-  verifChampForm();
+    /*verifPanier();*/
 
-  //Création de l'objet à envoyer à l'API
-  let data = {
-    contact,
-    products
-  };
+    verifChampForm();
 
-  ajaxPost(data)
-    .then(function (response) {
-    //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans order-confirm.html
+    //Création de l'objet à envoyer à l'API
+    let data = {
+      contact,
+      products
+    };
 
-      const order = JSON.stringify(response);      // On transforme cet objet en chaine de caractère
-      sessionStorage.setItem("order",order);
+    ajaxPost(data)
+      .then(function (response) {
+        //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans order-confirm.html
+
+        const order = JSON.stringify(response);      // On transforme cet objet en chaine de caractère
+        sessionStorage.setItem("order",order);
 
 
-      //Chargement de la page de confirmation
-      /*document.forms["formulaire"].action = './confirmation.html';*/
-      window.location.href = "confirmation.html"
-      document.forms["formulaire"].submit();
-    })
-    .catch(function (error) {
-      console.error("Erreur lors de l'envoi des données: " + error);
-      alert("erreur connexion");
-    })
-})
+        //Chargement de la page de confirmation
+        /*document.forms["formulaire"].action = './confirmation.html';*/
+        window.location.href = "confirmation.html"
+        document.forms["formulaire"].submit();
+      })
+      .catch(function (error) {
+        console.error("Erreur lors de l'envoi des données: " + error);
+        alert("erreur connexion");
+      })
+  }})
+
+
