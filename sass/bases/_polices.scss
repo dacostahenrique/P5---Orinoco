@@ -49,7 +49,6 @@
     font-family: 'robotoregular';
     src: url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot');
     src: url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
          url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
          url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
          url('../fonts/Roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
@@ -148,5 +147,9 @@ a:focus {
 }
 
 .confirmation__title{
+  font-family: 'robotoregular';
+}
+
+.form input{
   font-family: 'robotoregular';
 }

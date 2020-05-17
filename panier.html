@@ -80,17 +80,16 @@
                             <a class=" btn btn__autre__produit__panier" href="index.html" aria-label="Choisir un autre produit">Un autre produit ?</a>
                             </a>
                         </div>
-						<form class="form"  id="form"  action="confirmation.html" name ="formulaire">
-                <!--<form class="form"  id="form" action="confirmation.html" onsubmit="return verifChampForm(this)">-->
+						<form class="form"  id="form"  name ="formulaire">
                             <div class="form__saisie">
 							<div class="form__info">
                                 <legend class="form__info--legend">Vos coordonnées : </legend>
 
                                 <label for="nom">Nom :</label>
-                                <input type="text" name="nom" id="nom" placeholder ="Nom" required />
+                                <input type="text" name="nom" id="nom" pattern="[A-Za-z]{3,15}" placeholder ="Nom" required />
 
                                 <label for="prenom">Prénom :</label>
-                                <input type="text" name="prenom" id="prenom" placeholder ="Prénom" required />
+                                <input type="text" name="prenom" id="prenom" pattern="[A-Za-z]{3,15}" placeholder ="Prénom" required />
 
                                 <label for="email">E-mail :</label>
                                 <input type="email" name="email" id="email" placeholder ="Email" required />
@@ -109,13 +108,13 @@
                                 <input type="number" name="zip" id="zip" placeholder ="Code postal" required />
 
                                 <label for="ville">Ville :</label>
-                                <input type="text" name="ville" id="ville" placeholder ="Ville" required />
+                                <input type="text" name="ville" id="ville"  placeholder ="Ville" required />
 
                                 <label for="pays">Pays :</label>
-                				<input type="text" name="pays" id="pays" placeholder ="Pays" required />
+                				<input type="text" name="pays" id="pays" pattern="[A-Za-z]{3,30}" placeholder ="Pays" required />
                 			</div>
                             </div>
-                				<button class="btn"  id="confirm" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
+                				<button class="btn"  type ="submit" id="confirm" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
 						</form>
 					</article>
 
