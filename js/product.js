@@ -49,7 +49,7 @@ function getArticleByIdData(itemArticleById,data) {
 	</div>`;
 }
 
-// FONCTION CHOIX DES OPTIONS SUR L'RTICLE SELECTIONNE
+// FONCTION CHOIX DES OPTIONS SUR L'ARTICLE SELECTIONNE
 // ---------------------------------------------------
 
 function getSelectAllOption(data) {
@@ -113,7 +113,6 @@ function ajoutProduit(data) {
     }else{
       inpObj.validationMessage;
     }
-
   });
 }
 

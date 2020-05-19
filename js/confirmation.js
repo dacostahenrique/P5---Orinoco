@@ -12,16 +12,16 @@ affichageConfirmation = () =>{
     });
     //Parse du session storage
     let order = JSON.parse(sessionStorage.getItem("order"));
-    //Implatation de prénom et de id de commande dans le html sur la page de confirmation
+    //Implatation du nom, de la date, du N° de commande et du montant de la commande dans le html sur la page de confirmation
     document.getElementById("nomConfirm").innerHTML = order.contact.Nom;
     document.getElementById("date").innerHTML = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
     document.getElementById("orderId").innerHTML = order.orderId;
     document.getElementById("montantTTC").innerHTML = montantPanier + "€"
-    //Suppression de la clé du sessionStorage pour renvoyer au else si actualisation de la page ou via url direct
+    //Remise à zéro du sessionStorage et du localStorage
     sessionStorage.clear();
     localStorage.clear();
   }else{
-  //avertissement et redirection vers l'accueil
+  //Avertissement et redirection vers l'accueil
     alert("Aucune commande passée, Revenir au choix des produits !");
     window.location.href = "index.html"
   }

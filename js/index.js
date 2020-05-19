@@ -1,6 +1,6 @@
 
 // REQUETTE APPEL API Tous produits, en utilisant l'objet de requête Ajax contenant une promise
-// ------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
 
 const ajaxCatalogueProduits = new Ajax();
 
