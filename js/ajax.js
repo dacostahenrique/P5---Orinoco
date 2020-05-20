@@ -8,15 +8,18 @@ class Ajax {
     return new Promise(function (resolve, reject) {
       let request = new XMLHttpRequest();
       request.open(method, url, true);
+      if(method=='POST'){
+        request.setRequestHeader("Content-Type", "application/json");
+      }
       request.onreadystatechange = function () {
         if (this.readyState == XMLHttpRequest.DONE) {
-          if(this.status == 200)
+          if(this.status == 200 || this.status == 201)
             resolve(JSON.parse(this.responseText));
           else
             reject(request);
         }
       };
-      request.send(data);
+      request.send(JSON.stringify(data));
     })
   }
 }

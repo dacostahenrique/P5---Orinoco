@@ -1,24 +1,7 @@
-// FONCTION POST ENVOI DONNEES A L'API
-// ----------------------------------
+// INSTANCIATION CLASS AJAX ENVOI POST DONNEES A L'API
+// ---------------------------------------------------
 
-function ajaxPost (data) {
-  return new Promise(function (resolve, reject) {
-    let request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:3000/api/furniture/order");
-    request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify(data));
-    request.onreadystatechange = function () {
-      if (this.readyState === XMLHttpRequest.DONE) {
-        if (this.status === 201) {
-          let response = JSON.parse(this.responseText)
-          resolve(response)
-        } else {
-          reject(request)
-        }
-      }
-    }
-  })
-}
+const envoiCommande = new Ajax();
 
 // FONCTION DE VERIFICATION DU PANIER LORS DE L'ENVOI DU FORMULAIRE
 // ----------------------------------------------------------------
@@ -80,7 +63,7 @@ if(verifPanier() == true){ //On s'assure que le panier n'est pas vide avant d'en
       products
     };
 
-    ajaxPost(data)
+    envoiCommande.promiseGetData('POST',API_URL_POST,data)
       .then(function (response) {
       //Sauvegarde du retour de l'API dans la sessionStorage pour affichage dans confirmation.html
 
