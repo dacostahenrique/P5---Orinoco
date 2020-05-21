@@ -89,10 +89,10 @@
                                 <legend class="form__info--legend">Vos coordonnées : </legend>
 
                                 <label for="nom">Nom :</label>
-                                <input type="text" name="nom" id="nom" pattern="[A-Za-z]{3,15}" placeholder ="Nom" required />
+                                <input type="text" name="nom" id="nom" pattern="[^0-9]{3,40}" placeholder ="Nom" required />
 
                                 <label for="prenom">Prénom :</label>
-                                <input type="text" name="prenom" id="prenom" pattern="[A-Za-z]{3,15}" placeholder ="Prénom" required />
+                                <input type="text" name="prenom" id="prenom" pattern="[^0-9]{3,40}" placeholder ="Prénom" required />
 
                                 <label for="email">E-mail :</label>
                                 <input type="email" name="email" id="email" placeholder ="Email" required />
@@ -111,10 +111,10 @@
                                 <input type="number" name="zip" id="zip" placeholder ="Code postal" required />
 
                                 <label for="ville">Ville :</label>
-                                <input type="text" name="ville" id="ville"  placeholder ="Ville" required />
+                                <input type="text" name="ville" id="ville"  pattern="[^0-9]{3,40}" placeholder ="Ville" required />
 
                                 <label for="pays">Pays :</label>
-                				<input type="text" name="pays" id="pays" pattern="[A-Za-z]{3,30}" placeholder ="Pays" required />
+                				<input type="text" name="pays" id="pays" pattern="[^0-9]{3,40}" placeholder ="Pays" required />
                 			</div>
                             </div>
                 				<button class="btn"  type ="submit" id="confirm" aria-label="Valider vos informations et cliquer sur confirmer">Passer commande</button>
